@@ -1,0 +1,113 @@
+﻿<Window x:Class="MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Zamotaev_10feb"
+        mc:Ignorable="d"
+
+        Title="MainWindow" Width="800" Height="215" ResizeMode="NoResize">
+
+    <Grid x:Name="MainGrid" RenderTransformOrigin="0.5,0.5">
+
+
+        <GroupBox Header="Сколько вам лет" Margin="10,10,0,0" Height="62" VerticalAlignment="Top" HorizontalAlignment="Left" Width="160">
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBox x:Name="TxtLet" Grid.Column="0" Margin="10,5,10,5" BorderThickness="1,1,1,1" FontSize="18">
+                    <TextBox.BorderBrush>
+                        <LinearGradientBrush EndPoint="1.2,2" StartPoint="0,-2.1">
+                            <GradientStop Color="Black"/>
+                            <GradientStop Color="White" Offset="0.997"/>
+                        </LinearGradientBrush>
+                    </TextBox.BorderBrush>
+                </TextBox>
+                <Label x:Name="LblLet" Content="" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FFCCCCCC" Grid.Column="1" BorderThickness="1,1,1,1" Width="54">
+                    <Label.BorderBrush>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0,-1">
+                            <GradientStop Color="Black"/>
+                            <GradientStop Color="White" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Label.BorderBrush>
+                </Label>
+
+            </Grid>
+        </GroupBox>
+        <Button x:Name="CmdResult" Content="Определить" HorizontalAlignment="Left" Margin="202,26,0,0" VerticalAlignment="Top" Height="35" Width="75">
+            <Button.BorderBrush>
+                <LinearGradientBrush StartPoint="0,-2" EndPoint="0.5,1">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                            <RotateTransform CenterX="0.5" CenterY="0.5"/>
+                            <TranslateTransform X="2" Y="0.3"/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="White"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+        </Button>
+        <GroupBox Header="Чем следует заниматься" Margin="293,10,10,0" Height="62" VerticalAlignment="Top">
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label x:Name="LblInfo" Grid.Column="0" Grid.Row="0" Content=""  Background="#FFCCCCCC" BorderThickness="1,1,1,1" Margin="10,5,10,5" HorizontalContentAlignment="Stretch" Padding="5,5,5,5">
+                    <Label.BorderBrush>
+                        <LinearGradientBrush EndPoint="0,6.1" StartPoint="-0.1,-0.8">
+                            <GradientStop Color="Black"/>
+                            <GradientStop Color="White" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Label.BorderBrush>
+                </Label>
+
+            </Grid>
+        </GroupBox>
+        <Button x:Name="ExitBTN" Content="Выйти" Margin="0,0,10,10" Width="50" Height="30" VerticalContentAlignment="Center" VerticalAlignment="Bottom" HorizontalAlignment="Right"/>
+        <GroupBox Header="Время года когда вы родились" Margin="293,72,10,0" Height="62" VerticalAlignment="Top">
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label x:Name="LblSeasonOfYear" Grid.Column="0" Grid.Row="0" Content=""  Background="#FFCCCCCC" BorderThickness="1,1,1,1" Margin="10,5,10,5" HorizontalContentAlignment="Stretch" Padding="5,5,5,5">
+                    <Label.BorderBrush>
+                        <LinearGradientBrush EndPoint="0,6.1" StartPoint="-0.1,-0.8">
+                            <GradientStop Color="Black"/>
+                            <GradientStop Color="White" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Label.BorderBrush>
+                </Label>
+
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="В каком по счету месяце&#xD;&#xA;родились" Margin="10,72,0,0" Height="74" VerticalAlignment="Top" HorizontalAlignment="Left" Width="160">
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBox x:Name="SField" Grid.Column="0" Margin="10,5,10,5" BorderThickness="1,1,1,1" FontSize="16" Grid.ColumnSpan="2">
+                    <TextBox.BorderBrush>
+                        <LinearGradientBrush EndPoint="1.2,2" StartPoint="0,-2.1">
+                            <GradientStop Color="Black"/>
+                            <GradientStop Color="White" Offset="0.997"/>
+                        </LinearGradientBrush>
+                    </TextBox.BorderBrush>
+                </TextBox>
+
+            </Grid>
+        </GroupBox>
+
+    </Grid>
+</Window>
